@@ -46,5 +46,20 @@
 
             <input type="submit" value="Daftar">
         </form>
+
+        <script>
+            function validasiNama() {
+                let inputNama = document.getElementById("nama").value;
+                let pola = /^[a-zA-Z' ]+$/; // Hanya huruf, spasi, dan petik satu yang diperbolehkan
+
+                if (!pola.test(inputNama)) {
+                    alert("Nama hanya boleh berisi huruf dan tanda petik satu (')");
+                    return false;
+                }
+                alert("Nama Valid!");
+                return true;
+            }
+        </script>
+        
     </body>
 </html>
